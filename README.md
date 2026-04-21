@@ -14,17 +14,7 @@
 sudo apt update && sudo apt install -y gcc build-essential libssl-dev
 ```
 
-### Using This Repository
 
-This is a **template repository**. Do **no195t** fork it.
-
-1. Click **"Use this template"** → **"Create a new repository"** on GitHub
-2. Name your repository (e.g., `SRN-pes-vcs`) and set it to **public**. Replace `SRN` with your actual SRN, e.g., `PESXUG24CSYYY-pes-vcs`
-3. Clone this repository to your local machine and do all your lab work inside this directory.
-4.  **Important:** Remember to commit frequently as you progress. You are required to have a minimum of 5 detailed commits per phase. Refer to [Submission Requirements](#submission-requirements) for more details.
-5. Clone your new repository and start working
-
-The repository contains skeleton source files with `// TODO` markers where you need to write code. Functions marked `// PROVIDED` are complete — do not modify them.
 
 ### Building
 
@@ -39,7 +29,7 @@ make clean    # Remove all build artifacts
 PES-VCS reads the author name from the `PES_AUTHOR` environment variable:
 
 ```bash
-export PES_AUTHOR="Jagadeesh  <PES1UG24CS195>"
+export PES_AUTHOR="HIMESH  <PES1UG24CS188>"
 ```
 
 If unset, it defaults to `"PES User <pes@localhost>"`.
@@ -518,11 +508,11 @@ make test-integration
 ```
 
 **📸 Screenshot 4A:** Output of `./pes log` showing three commits with hashes, authors, timestamps, and messages.
-![4A](Screenshots/4A.jpeg)
+![4A](Screenshots/4A.png)
 **📸 Screenshot 4B:** `find .pes -type f | sort` showing object store growth after three commits.
-![4B](Screenshots/4B.jpeg)
+![4B](Screenshots/4B.png)
 **📸 Screenshot 4C:** `cat .pes/refs/heads/main` and `cat .pes/HEAD` showing the reference chain.
-![4C](Screenshots/4C.jpeg)
+![4C](Screenshots/4C.png)
 ---
 
 ## Phase 5 & 6: Analysis-Only Questions
