@@ -16,7 +16,7 @@ sudo apt update && sudo apt install -y gcc build-essential libssl-dev
 
 ### Using This Repository
 
-This is a **template repository**. Do **not** fork it.
+This is a **template repository**. Do **no195t** fork it.
 
 1. Click **"Use this template"** → **"Create a new repository"** on GitHub
 2. Name your repository (e.g., `SRN-pes-vcs`) and set it to **public**. Replace `SRN` with your actual SRN, e.g., `PESXUG24CSYYY-pes-vcs`
@@ -39,7 +39,7 @@ make clean    # Remove all build artifacts
 PES-VCS reads the author name from the `PES_AUTHOR` environment variable:
 
 ```bash
-export PES_AUTHOR="Your Name <PESXUG24CS042>"
+export PES_AUTHOR="Jagadeesh  <PES1UG24CS195>"
 ```
 
 If unset, it defaults to `"PES User <pes@localhost>"`.
@@ -375,9 +375,10 @@ The test program verifies:
 - Integrity checking (detects corrupted objects)
 
 **📸 Screenshot 1A:** Output of `./test_objects` showing all tests passing.
+![1A](Screenshots/1A.png)
 
 **📸 Screenshot 1B:** `find .pes/objects -type f` showing the sharded directory structure.
-
+![1B](Screenshots/1B.png)
 ---
 
 ## Phase 2: Tree Objects
@@ -407,9 +408,10 @@ The test program verifies:
 - Deterministic serialization (same entries in any order → identical output)
 
 **📸 Screenshot 2A:** Output of `./test_tree` showing all tests passing.
+![2A](Screenshots/2A.png)
 
 **📸 Screenshot 2B:** Pick a tree object from `find .pes/objects -type f` and run `xxd .pes/objects/XX/YYY... | head -20` to show the raw binary format.
-
+![2B](Screenshots/2B.png)
 ---
 
 ## Phase 3: The Index (Staging Area)
@@ -465,9 +467,9 @@ cat .pes/index    # Human-readable text format
 ```
 
 **📸 Screenshot 3A:** Run `./pes init`, `./pes add file1.txt file2.txt`, `./pes status` — show the output.
-
+![3A](Screenshots/3A.png)
 **📸 Screenshot 3B:** `cat .pes/index` showing the text-format index with your entries.
-
+![3B](Screenshots/3B.png)
 ---
 
 ## Phase 4: Commits and History
@@ -516,11 +518,11 @@ make test-integration
 ```
 
 **📸 Screenshot 4A:** Output of `./pes log` showing three commits with hashes, authors, timestamps, and messages.
-
+![4A](Screenshots/4A.jpeg)
 **📸 Screenshot 4B:** `find .pes -type f | sort` showing object store growth after three commits.
-
+![4B](Screenshots/4B.jpeg)
 **📸 Screenshot 4C:** `cat .pes/refs/heads/main` and `cat .pes/HEAD` showing the reference chain.
-
+![4C](Screenshots/4C.jpeg)
 ---
 
 ## Phase 5 & 6: Analysis-Only Questions
